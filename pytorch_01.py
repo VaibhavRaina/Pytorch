@@ -1,0 +1,13 @@
+import torch
+x=torch.arange(1.,10.)
+print(x)
+print(x.shape)
+y=x.reshape(9,1)
+print(y)
+x_stacked=torch.stack([x,x,x,x,],dim=1)
+print(x_stacked)
+z=torch.rand(3,1,2,1,4)
+squeezed=torch.squeeze(z)
+print(squeezed.shape)
+unsqueezed=squeezed.unsqueeze(dim=1)
+print(unsqueezed.shape)
